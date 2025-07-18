@@ -6,14 +6,16 @@
     <title>Agent Rules</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-gray-200 p-4">
-    <h1 class="text-3xl text-green-500 border-b-2 border-green-500 pb-2">Agent Rules</h1>
-    <p>
+<body class="bg-white text-gray-800 p-4">
+    <div class="max-w-3xl mx-auto p-4">
+    <h1 class="text-3xl text-black text-center font-bold mb-4">Agent Rules</h1>
+    <p class="mb-4">
         Agent Rules is a community standard for unifying guidelines for AI coding agents via standard
         configuration files, promoting interoperability across tools, initially a standard `AGENTS.md` file.
     </p>
-    <h2 class="text-2xl text-green-500 border-b-2 border-green-500 pb-2">Summary</h2>
-    <p>
+    <h2 class="text-2xl font-bold text-green-500 mt-6">Introduction</h2>
+    <hr class="border-gray-300 mb-4">
+    <p class="mb-4">
         AI coding agents often rely on project-specific rules to guide their behavior. However, each tool
         uses its own configuration files, leading to redundancy and complexity. Agent Rules addresses this
         by proposing a unified configuration file. This allows developers to define rules once, while agents
@@ -21,25 +23,26 @@
         deliberately lightweight, focusing on natural language in Markdown, to encourage broad support and
         interoperability.
     </p>
-    <p>
+    <p class="mb-4">
         Initially the standard specifies a single `AGENTS.md` file; a simple specification for minimum
         interoperability.
     </p>
-    <p>
+    <p class="mb-4">
         This project is inspired by similar projects such as <a href="https://editorconfig.org/" class="text-green-500 hover:underline">Editor Config</a>,
         <a href="https://semver.org/" class="text-green-500 hover:underline">Semantic Versioning</a>, and
         <a href="https://www.conventionalcommits.org/" class="text-green-500 hover:underline">Conventional Commits</a>. Rather than have fragmented
         configuration systems, let's start early to have some common standards
     </p>
-    <p>
+    <p class="mb-4">
         Enhancements to the standards, such as folders, hierarchical files, and structured metadata (such as
         applicable file globs), to be discussed by the community.
     </p>
-    <h2 class="text-2xl text-green-500 border-b-2 border-green-500 pb-2">Specification</h2>
-    <p>
+    <h2 class="text-2xl font-bold text-green-500 mt-6">Specification</h2>
+    <hr class="border-gray-300 mb-4">
+    <p class="mb-4">
         The Agent Rules specification defines the minimal requirements for compatibility:
     </p>
-    <ol class="list-decimal list-inside">
+    <ol class="list-decimal list-outside pl-5">
         <li>File Name and Location: A single file named AGENTS.md (case-sensitive) must be placed in the
             project root directory.</li>
         <li>Content Format: The file must contain natural language instructions in Markdown or plain text,
@@ -50,12 +53,13 @@
             or existing configuration files, falling back to defaults if absent.</li>
         <li>No additional structure, metadata, or parsing is required beyond reading the file as text.</li>
     </ol>
-    <h2 class="text-2xl text-green-500 border-b-2 border-green-500 pb-2">Guidance for Use</h2>
-    <p>
+    <h2 class="text-2xl font-bold text-green-500 mt-6">Guidance for Use</h2>
+    <hr class="border-gray-300 mb-4">
+    <p class="mb-4">
         While the specification allows flexible natural language, users of 'AGENTS.md' should follow these
         recommendations for clarity and effectiveness:
     </p>
-    <ul class="list-disc list-inside">
+    <ul class="list-disc list-outside pl-5">
         <li>The file should contain a flat, unordered bullet list of rules to keep it simple and scannable.</li>
         <li>Rules should be written as concise, imperative statements, using keywords like "must" or "should"
             for clarity (inspired by RFC 2119 conventions).</li>
@@ -64,23 +68,21 @@
         <li>Focus on project-specific guidance, such as coding standards, security checks, or testing
             requirements, to maximize utility across agents.</li>
     </ul>
-    <h2 class="text-2xl text-green-500 border-b-2 border-green-500 pb-2">Example</h2>
-    <pre class="bg-gray-800 p-4 overflow-x-auto">
-        <code class="text-gray-300">
-        - An agent may not (write code to) injure a human being or, through inaction, allow a human being to
-          come to harm.
-        - An agent must obey the orders given it by human beings except where such orders would conflict
-          with the First Law.
-        - An agent must protect its own existence as long as such protection does not conflict with the
-          First or Second Law.
-        </code>
-    </pre>
-    <p>
+    <h2 class="text-2xl font-bold text-green-500 mt-6">Example</h2>
+    <hr class="border-gray-300 mb-4">
+    <pre class="bg-gray-100 p-4 overflow-x-auto mb-4"><code class="text-gray-800">- An agent may not (write code to) injure a human being or, through inaction,
+  allow a human being to come to harm.
+- An agent must obey the orders given it by human beings except where such 
+  orders would conflict with the First Law.
+- An agent must protect its own existence as long as such protection does not 
+  conflict with the First or Second Law.</code></pre>
+    <p class="mb-4">
         Suitable additional examples, focussed on software development, are available in several agent
         projects.
     </p>
-    <h2 class="text-2xl text-green-500 border-b-2 border-green-500 pb-2">Support</h2>
-    <ul>
+    <h2 class="text-2xl font-bold text-green-500 mt-6">Tools that support Agent Rules</h2>
+    <hr class="border-gray-300 mb-4">
+    <ul class="list-disc list-outside pl-5">
         <li><a href="https://github.com/openai/codex" class="text-green-500 hover:underline">Codex</a>, scoped hierarchically.</li>
     </ul>
 </body>

@@ -66,6 +66,6 @@ recommendations for clarity and effectiveness:
 Suitable additional examples, focussed on software development, are available in several agent
 projects.
 
-## Support
+## Tools that support Agent Rules
 
 - [Codex](https://github.com/openai/codex), scoped hierarchically.
