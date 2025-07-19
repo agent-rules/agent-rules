@@ -73,49 +73,6 @@
           class="font-bold">AGENTS.md</code> if
         present.</li>
     </ol>
-    <h2 class="text-2xl font-bold text-green-600 mt-6">Guidance for Use</h2>
-    <hr class="border-gray-300 mb-4">
-    <p class="mb-4">
-      While the specification allows flexible natural language, users of 'AGENTS.md' should follow these
-      recommendations for clarity and effectiveness:
-    </p>
-    <ul class="list-disc list-outside pl-5">
-      <li>The file should contain a flat, unordered bullet list of rules to keep it simple and scannable.</li>
-      <li>Rules should be written as concise, imperative statements, using keywords like "MUST" or "SHOULD"
-        for clarity (inspired by RFC 2119 conventions).</li>
-      <li>Use Markdown headings sparingly if needed for organization, but avoid complex structures to
-        maintain agent compatibility.</li>
-      <li>Focus on project-specific guidance, such as coding standards, security checks, or testing
-        requirements, to maximize utility across agents.</li>
-    </ul>
-    <h2 class="text-2xl font-bold text-green-600 mt-6">Example</h2>
-    <hr class="border-gray-300 mb-4">
-    <pre class="bg-gray-100 p-4 overflow-x-auto mb-4"><code class="text-gray-800">- An agent MUST NOT (write code to) injure a human being or, through inaction,
-  allow a human being to come to harm.
-- An agent MUST obey the orders given it by human beings except where such 
-  orders would conflict with the First Law.
-- An agent MUST protect its own existence as long as such protection does not 
-  conflict with the First or Second Law.</code></pre>
-    <p class="mb-4">
-      Suitable additional examples, focussed on software development, are available in several agent
-      projects:
-    </p>
-    <ul class="list-disc list-outside pl-5">
-      <li><a href="https://github.com/Aider-AI/conventions" class="text-green-500 hover:underline">Aider conventions</a>
-        - Collection of community-contributed CONVENTIONS.md files specifying coding guidelines for Aider AI to follow
-        in repositories.</li>
-      <li><a href="https://github.com/cline/prompts" class="text-green-500 hover:underline">Cline rules</a> -
-        Community-driven repository of .clinerules files offering natural language guidelines for customizing Cline AI's
-        behavior in projects.</li>
-      <li><a href="https://agentsmd.net/agents-md-examples/" class="text-green-500 hover:underline">Codex CLI
-          examples</a> -
-        Examples for OpenAI Codex and other AI agents for navigating your codebases, running tests, and adhering to your
-        project's standard practices.</li>
-      <li><a href="https://github.com/fielding/copilot-instructions" class="text-green-500 hover:underline">GitHub
-          Copilot instructions</a> - Curated set of natural language instructions in Markdown for customizing GitHub
-        Copilot's code generation across languages and
-        frameworks.</li>
-    </ul>
     <h2 class="text-2xl font-bold text-green-600 mt-6">Tools that support Agent Rules</h2>
     <hr class="border-gray-300 mb-4">
     <ul class="list-disc list-outside pl-5">
@@ -141,23 +98,83 @@
       <li><a href="https://opencode.ai/docs/rules/" class="text-green-500 hover:underline">OpenCode</a>, supports <code
           class="font-bold">AGENTS.md</code> by default in both the current directory and parent directories.</li>
     </ul>
-    <p class="mt-12 mb-4 text-right">
-      <a href="mailto:hello@agent-rules.org" class="text-green-600 hover:underline" title="Email"><i
-          class="fas fa-envelope mr-4 text-3xl"></i></a>
-      <a href="https://github.com/agent-rules/agent-rules" class="text-green-600 hover:underline" title="GitHub"><i
-          class="fab fa-github mr-2 text-3xl"></i></a>
-    </p>
-    <div>
-      <hr class="border-gray-300 mb-2">
-      <p class="text-xs"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
-            class="float-left pr-4" alt="Creative Commons License" style="border-width:0"
-            src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-        © Sly Gryphon 2025. This work is licensed under a <a rel="license"
-          href="http://creativecommons.org/licenses/by/4.0/" class="text-green-500 hover:underline">Creative Commons
-          Attribution 4.0 International
-          License</a>.
+    <h3 class="text-xl font-bold text-green-600 mt-6">Configure manually</h2>
+      <p class="mb-2 mt-2">
+        You may also be able to configure other tools by linking the file they use to <code
+          class="font-bold">AGENTS.md</code>, for example to configure <a href="https://www.anthropic.com/claude-code"
+          class="text-green-500 hover:underline">Claude Code</a>:
       </p>
-    </div>
+      <p>On Linux:
+      <pre
+        class="bg-gray-100 p-4 overflow-x-auto mb-2"><code class="text-gray-800">ln -s AGENTS.md CLAUDE.md</code></pre>
+      </p>
+      <p>On Windows:
+      <pre
+        class="bg-gray-100 p-4 overflow-x-auto mb-2"><code class="text-gray-800">mklink CLAUDE.md AGENTS.md</code></pre>
+      </p>
+      <h2 class="text-2xl font-bold text-green-600 mt-6">Guidance for Use</h2>
+      <hr class="border-gray-300 mb-4">
+      <p class="mb-4">
+        While the specification allows flexible natural language, users of 'AGENTS.md' should follow these
+        recommendations for clarity and effectiveness:
+      </p>
+      <ul class="list-disc list-outside pl-5">
+        <li>The file should contain a flat, unordered bullet list of rules to keep it simple and scannable.</li>
+        <li>Rules should be written as concise, imperative statements, using keywords like "MUST" or "SHOULD"
+          for clarity (inspired by RFC 2119 conventions).</li>
+        <li>Use Markdown headings sparingly if needed for organization, but avoid complex structures to
+          maintain agent compatibility.</li>
+        <li>Focus on project-specific guidance, such as coding standards, security checks, or testing
+          requirements, to maximize utility across agents.</li>
+      </ul>
+      <h2 class="text-2xl font-bold text-green-600 mt-6">Example <code>AGENTS.md</code> file</h2>
+      <hr class="border-gray-300 mb-4">
+      <pre class="bg-gray-100 p-4 overflow-x-auto mb-4"><code class="text-gray-800">- An agent MUST NOT (write code to) injure a human being or, through inaction,
+  allow a human being to come to harm.
+- An agent MUST obey the orders given it by human beings except where such 
+  orders would conflict with the First Law.
+- An agent MUST protect its own existence as long as such protection does not 
+  conflict with the First or Second Law.</code></pre>
+      <p class="mb-4">
+        Suitable additional examples, focussed on software development, are available in several agent
+        projects:
+      </p>
+      <ul class="list-disc list-outside pl-5">
+        <li><a href="https://github.com/Aider-AI/conventions" class="text-green-500 hover:underline">Aider
+            conventions</a>
+          - Collection of community-contributed CONVENTIONS.md files specifying coding guidelines for Aider AI to follow
+          in repositories.</li>
+        <li><a href="https://github.com/cline/prompts" class="text-green-500 hover:underline">Cline rules</a> -
+          Community-driven repository of .clinerules files offering natural language guidelines for customizing Cline
+          AI's
+          behavior in projects.</li>
+        <li><a href="https://agentsmd.net/agents-md-examples/" class="text-green-500 hover:underline">Codex CLI
+            examples</a> -
+          Examples for OpenAI Codex and other AI agents for navigating your codebases, running tests, and adhering to
+          your
+          project's standard practices.</li>
+        <li><a href="https://github.com/fielding/copilot-instructions" class="text-green-500 hover:underline">GitHub
+            Copilot instructions</a> - Curated set of natural language instructions in Markdown for customizing GitHub
+          Copilot's code generation across languages and
+          frameworks.</li>
+      </ul>
+      <p class="mt-12 mb-4 text-right">
+        <a href="mailto:hello@agent-rules.org" class="text-green-600 hover:underline" title="Email"><i
+            class="fas fa-envelope mr-4 text-3xl"></i></a>
+        <a href="https://github.com/agent-rules/agent-rules" class="text-green-600 hover:underline" title="GitHub"><i
+            class="fab fa-github mr-2 text-3xl"></i></a>
+      </p>
+      <div>
+        <hr class="border-gray-300 mb-2">
+        <p class="text-xs"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+              class="float-left pr-4" alt="Creative Commons License" style="border-width:0"
+              src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+          © Sly Gryphon 2025. This work is licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by/4.0/" class="text-green-500 hover:underline">Creative Commons
+            Attribution 4.0 International
+            License</a>.
+        </p>
+      </div>
 </body>
 
 </html>
