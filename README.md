@@ -27,25 +27,31 @@ applicable file globs), to be discussed by the community.
 
 ## Specification
 
-The Agent Rules specification defines the minimal requirements for compatibility:
+The Agent Rules specification defines the minimal requirements for compatibility, with key words
+“MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”,
+and “OPTIONAL” interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt):
 
-1. File Name and Location: A single file named AGENTS.md (case-sensitive) must be placed in the
-   project root directory.
-2. Content Format: The file must contain natural language instructions in Markdown or plain text,
-   providing guidance for AI coding agents (e.g., rules, preferences, or workflows).
-3. Usage by Agents: Agents must check for the existence of AGENTS.md in the project root. If
-   present, its contents should be included in the agent's context scope (e.g., prepended or
-   appended to prompts or system instructions). Agents may process it in conjunction with any custom
-   or existing configuration files, falling back to defaults if absent.
-4. No additional structure, metadata, or parsing is required beyond reading the file as text.
+1. File Name and Location: Agents implementing Agent Rules MUST check for the existence of
+   `AGENTS.md` in the project root. If present, its contents SHOULD be included in the agent's
+   context scope (e.g., prepended or appended to prompts or system instructions).
+2. Content Format: The file MUST be parsed as natural language instructions, in Markdown or plain
+   text, and MUST be used to provide guidance to AI coding agents (e.g., rules, preferences, or
+   workflows).
+3. Agents MUST NOT require additional structure, metadata, or parsing beyond reading the file as
+   text.
+4. Agents MAY process it in conjunction with any custom or existing configuration files, falling
+   back to defaults if absent.
+5. Agents MAY also check for and include any `AGENTS.md` file in the current working directory,
+   incorporating its contents into the context scope alongside the project root `AGENTS.md` if
+   present.
 
-## Guidance for Use
+## Guidance for use
 
-While the specification allows flexible natural language, users of 'AGENTS.md' should follow these
+While the specification allows flexible natural language, users of `AGENTS.md` should follow these
 recommendations for clarity and effectiveness:
 
 - The file should contain a flat, unordered bullet list of rules to keep it simple and scannable.
-- Rules should be written as concise, imperative statements, using keywords like "must" or "should"
+- Rules should be written as concise, imperative statements, using keywords like "MUST" or "SHOULD"
   for clarity (inspired by RFC 2119 conventions).
 - Use Markdown headings sparingly if needed for organization, but avoid complex structures to
   maintain agent compatibility.
@@ -55,11 +61,11 @@ recommendations for clarity and effectiveness:
 ## Example
 
 ```markdown
-- An agent may not (write code to) injure a human being or, through inaction, allow a human being to
-  come to harm.
-- An agent must obey the orders given it by human beings except where such orders would conflict
+- An agent MUST NOT (write code to) injure a human being or, through inaction, allow a human being
+  to come to harm.
+- An agent MUST obey the orders given it by human beings except where such orders would conflict
   with the First Law.
-- An agent must protect its own existence as long as such protection does not conflict with the
+- An agent MUST protect its own existence as long as such protection does not conflict with the
   First or Second Law.
 ```
 
