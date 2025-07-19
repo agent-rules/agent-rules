@@ -17,9 +17,9 @@
     <p class="mb-4">
       Agent Rules is a community standard for unifying guidelines for AI coding agents via standard
       configuration files, promoting interoperability across tools, initially a standard <code
-        class="text-green-500">AGENTS.md</code> file.
+        class="font-bold">AGENTS.md</code> file.
     </p>
-    <h2 class="text-2xl font-bold text-green-500 mt-6">Introduction</h2>
+    <h2 class="text-2xl font-bold text-green-600 mt-6">Introduction</h2>
     <hr class="border-gray-300 mb-4">
     <p class="mb-4">
       AI coding agents often rely on project-specific rules to guide their behavior. However, each tool
@@ -30,7 +30,7 @@
       interoperability.
     </p>
     <p class="mb-4">
-      Initially the standard specifies a single <code class="text-green-500">AGENTS.md</code> file; a simple
+      Initially the standard specifies a single <code class="font-bold">AGENTS.md</code> file; a simple
       specification for minimum
       interoperability.
     </p>
@@ -46,7 +46,7 @@
       Enhancements to the standards, such as folders, hierarchical files, and structured metadata (such as
       applicable file globs), to be discussed by the community.
     </p>
-    <h2 class="text-2xl font-bold text-green-500 mt-6">Specification</h2>
+    <h2 class="text-2xl font-bold text-green-600 mt-6">Specification</h2>
     <hr class="border-gray-300 mb-4">
     <p class="mb-4">
       The Agent Rules specification defines the minimal requirements for compatibility, with key words
@@ -56,7 +56,7 @@
     </p>
     <ol class="list-decimal list-outside pl-5">
       <li>File Name and Location: Agents implementing Agent Rules MUST check for the existence of
-        <code class="text-green-500">AGENTS.md</code> in the project root. If present, its contents SHOULD be included
+        <code class="font-bold">AGENTS.md</code> in the project root. If present, its contents SHOULD be included
         in the agent's
         context scope (e.g., prepended or appended to prompts or system instructions).
       </li>
@@ -67,13 +67,13 @@
         text.</li>
       <li>Agents MAY process it in conjunction with any custom or existing configuration files, falling
         back to defaults if absent.</li>
-      <li>Agents MAY also check for and include any <code class="text-green-500">AGENTS.md</code> file in the current
+      <li>Agents MAY also check for and include any <code class="font-bold">AGENTS.md</code> file in the current
         working directory,
         incorporating its contents into the context scope alongside the project root <code
-          class="text-green-500">AGENTS.md</code> if
+          class="font-bold">AGENTS.md</code> if
         present.</li>
     </ol>
-    <h2 class="text-2xl font-bold text-green-500 mt-6">Guidance for Use</h2>
+    <h2 class="text-2xl font-bold text-green-600 mt-6">Guidance for Use</h2>
     <hr class="border-gray-300 mb-4">
     <p class="mb-4">
       While the specification allows flexible natural language, users of 'AGENTS.md' should follow these
@@ -88,7 +88,7 @@
       <li>Focus on project-specific guidance, such as coding standards, security checks, or testing
         requirements, to maximize utility across agents.</li>
     </ul>
-    <h2 class="text-2xl font-bold text-green-500 mt-6">Example</h2>
+    <h2 class="text-2xl font-bold text-green-600 mt-6">Example</h2>
     <hr class="border-gray-300 mb-4">
     <pre class="bg-gray-100 p-4 overflow-x-auto mb-4"><code class="text-gray-800">- An agent MUST NOT (write code to) injure a human being or, through inaction,
   allow a human being to come to harm.
@@ -98,30 +98,37 @@
   conflict with the First or Second Law.</code></pre>
     <p class="mb-4">
       Suitable additional examples, focussed on software development, are available in several agent
-      projects.
+      projects:
     </p>
     <ul class="list-disc list-outside pl-5">
-      <li><a href="https://github.com/cline/prompts" class="text-green-500 hover:underline">Cline rules</a> -
-        Community-driven repository of .clinerules files offering natural language guidelines for customizing Cline AI's
-        behavior in projects.</li>
       <li><a href="https://github.com/Aider-AI/conventions" class="text-green-500 hover:underline">Aider conventions</a>
         - Collection of community-contributed CONVENTIONS.md files specifying coding guidelines for Aider AI to follow
         in repositories.</li>
+      <li><a href="https://github.com/cline/prompts" class="text-green-500 hover:underline">Cline rules</a> -
+        Community-driven repository of .clinerules files offering natural language guidelines for customizing Cline AI's
+        behavior in projects.</li>
       <li><a href="https://github.com/fielding/copilot-instructions" class="text-green-500 hover:underline">GitHub
           Copilot instructions</a> - Curated set of natural language instructions in Markdown for customizing GitHub
         Copilot's code generation across languages and
         frameworks.</li>
     </ul>
-    <h2 class="text-2xl font-bold text-green-500 mt-6">Tools that support Agent Rules</h2>
+    <h2 class="text-2xl font-bold text-green-600 mt-6">Tools that support Agent Rules</h2>
     <hr class="border-gray-300 mb-4">
     <ul class="list-disc list-outside pl-5">
-      <li><a href="https://github.com/openai/codex" class="text-green-500 hover:underline">Codex</a>, scoped
-        hierarchically.</li>
+      <li><a href="https://aider.chat/" class="text-green-500 hover:underline">Aider</a>, can be configured to always
+        load <code class="font-bold">AGENTS.md</code> as default coding conventions in the <code
+          class="text-gray-800">.aider.conf.yml</code> file.
+        <pre
+          class="bg-gray-100 p-4 overflow-x-auto mb-2"><code class="text-gray-800">read: [AGENTS.md, CONVENTIONS.md]</code></pre>
+      </li>
+      <li><a href="https://github.com/openai/codex" class="text-green-500 hover:underline">Codex</a>, supports <code
+          class="font-bold">AGENTS.md</code> in both the project root and current directory.
+      </li>
     </ul>
     <p class="mt-12 mb-4 text-right">
-      <a href="mailto:hello@agent-rules.org" class="text-green-500 hover:underline" title="Email"><i
+      <a href="mailto:hello@agent-rules.org" class="text-green-600 hover:underline" title="Email"><i
           class="fas fa-envelope mr-4 text-3xl"></i></a>
-      <a href="https://github.com/agent-rules/agent-rules" class="text-green-500 hover:underline" title="GitHub"><i
+      <a href="https://github.com/agent-rules/agent-rules" class="text-green-600 hover:underline" title="GitHub"><i
           class="fab fa-github mr-2 text-3xl"></i></a>
     </p>
     <div>
@@ -135,7 +142,6 @@
           License</a>.
       </p>
     </div>
-
 </body>
 
 </html>
