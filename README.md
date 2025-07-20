@@ -56,6 +56,7 @@ read: AGENTS.md
 
 - [Codex](https://github.com/openai/codex?tab=readme-ov-file#memory--project-docs), supports
   `AGENTS.md` in both the project root and current directory.
+- [Factory AI](https://www.factory.ai/), natively supports `AGENTS.md`.
 - [Gemini](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson),
   context file can be configured to use `AGENTS.md` in the `.gemini/settings.json` file.
 
