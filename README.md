@@ -45,6 +45,46 @@ and “OPTIONAL” interpreted as described in [RFC 2119](https://www.ietf.org/r
    incorporating its contents into the context scope alongside the project root `AGENTS.md` if
    present.
 
+## Tools that support Agent Rules
+
+- [Aider](https://aider.chat/docs/usage/conventions.html#always-load-conventions), can be configured
+  to always load `AGENTS.md` as default coding conventions in the `.aider.conf.yml` file.
+
+```yaml
+read: AGENTS.md
+```
+
+- [Codex](https://github.com/openai/codex?tab=readme-ov-file#memory--project-docs), supports
+  `AGENTS.md` in both the project root and current directory.
+- [Gemini](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson),
+  context file can be configured to use `AGENTS.md` in the `.gemini/settings.json` file.
+
+```json
+{
+  "contextFileName": "AGENTS.md"
+}
+```
+
+- [OpenCode](https://opencode.ai/docs/rules/), supports `AGENTS.md` by default in both the current
+  directory and parent directories.
+
+### Configure manually
+
+You may also be able to configure other tools by linking the file they use to AGENTS.md, for example
+to configure [Claude Code]():
+
+On Linux:
+
+```shell
+ln -s AGENTS.md CLAUDE.md
+```
+
+On Windows:
+
+```powershell
+mklink CLAUDE.md AGENTS.md
+```
+
 ## Guidance for use
 
 While the specification allows flexible natural language, users of `AGENTS.md` should follow these
@@ -72,6 +112,13 @@ recommendations for clarity and effectiveness:
 Suitable additional examples, focussed on software development, are available in several agent
 projects.
 
-## Tools that support Agent Rules
-
-- [Codex](https://github.com/openai/codex), scoped hierarchically.
+- [Aider conventions](https://github.com/Aider-AI/conventions) - Collection of community-contributed
+  CONVENTIONS.md files specifying coding guidelines for Aider AI to follow in repositories.
+- [Cline rules](https://github.com/cline/prompts) - Community-driven repository of .clinerules files
+  offering natural language guidelines for customizing Cline AI's behavior in projects.
+- [Codex CLI examples](https://agentsmd.net/agents-md-examples/) - Examples for OpenAI Codex and
+  other AI agents for navigating your codebases, running tests, and adhering to your project's
+  standard practices.
+- [GitHub Copilot instructions](https://github.com/fielding/copilot-instructions) - Curated set of
+  natural language instructions in Markdown for customizing GitHub Copilot's code generation across
+  languages and frameworks.
