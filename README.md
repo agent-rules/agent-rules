@@ -66,6 +66,8 @@ read: AGENTS.md
 }
 ```
 
+- [Github Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results#adding-custom-instructions-to-your-repository),
+  if there is no Copilot instructions file, will fall back to any existing `AGENTS.md` file.
 - [Kilo Code](https://kilocode.ai/), inherited from Roo Code
 - [OpenCode](https://opencode.ai/docs/rules/), supports `AGENTS.md` by default in both the current
   directory and parent directories.
