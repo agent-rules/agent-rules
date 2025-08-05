@@ -66,8 +66,12 @@ read: AGENTS.md
 }
 ```
 
+- [Kilo Code](https://kilocode.ai/), inherited from Roo Code
 - [OpenCode](https://opencode.ai/docs/rules/), supports `AGENTS.md` by default in both the current
   directory and parent directories.
+- [Phoenix](https://phoenix.new/) ships with a default `AGENTS.md` file.
+- [Roo Code](https://docs.roocode.com/update-notes/v3.24.0?_highlight=agents.md#agent-rules-standard-support)
+  automatically finds and applies `AGENTS.md`
 
 ### Configure manually
 
