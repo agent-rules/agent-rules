@@ -54,8 +54,6 @@ and “OPTIONAL” interpreted as described in [RFC 2119](https://www.ietf.org/r
 read: AGENTS.md
 ```
 
-- [Codex](https://github.com/openai/codex?tab=readme-ov-file#memory--project-docs), supports
-  `AGENTS.md` in both the project root and current directory.
 - [Factory AI](https://www.factory.ai/), natively supports `AGENTS.md`.
 - [Gemini](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson),
   context file can be configured to use `AGENTS.md` in the `.gemini/settings.json` file.
@@ -69,6 +67,8 @@ read: AGENTS.md
 - [Github Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results#adding-custom-instructions-to-your-repository),
   if there is no Copilot instructions file, will fall back to any existing `AGENTS.md` file.
 - [Kilo Code](https://kilocode.ai/), inherited from Roo Code
+- [OpenAI Codex](https://github.com/openai/codex?tab=readme-ov-file#memory--project-docs), supports
+  `AGENTS.md` in both the project root and current directory.
 - [OpenCode](https://opencode.ai/docs/rules/), supports `AGENTS.md` by default in both the current
   directory and parent directories.
 - [Phoenix](https://phoenix.new/) ships with a default `AGENTS.md` file.
