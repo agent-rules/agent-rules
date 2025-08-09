@@ -56,7 +56,7 @@ read: AGENTS.md
 
 - [Factory AI](https://www.factory.ai/), natively supports `AGENTS.md`.
 - [Github Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results#adding-custom-instructions-to-your-repository),
-  if there is no Copilot instructions file, will fall back to any existing `AGENTS.md` file.
+  if there is no Copilot instructions file, will fall back to any existing `AGENTS.md` file.\*1
 - [Google Gemini](https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson),
   context file can be configured to use `AGENTS.md` in the `.gemini/settings.json` file.
 
@@ -74,6 +74,10 @@ read: AGENTS.md
 - [Phoenix](https://phoenix.new/) ships with a default `AGENTS.md` file.
 - [Roo Code](https://docs.roocode.com/update-notes/v3.24.0?_highlight=agents.md#agent-rules-standard-support)
   automatically finds and applies `AGENTS.md`
+- [Zed](https://zed.dev/docs/ai/rules) has compatibility support for `AGENTS.md`
+
+\*1 It is unclear if Github Copilot has support, as the mention has since been removed from their
+documentation (on 2025-08-08).
 
 ### Configure manually
 
