@@ -54,6 +54,7 @@ and “OPTIONAL” interpreted as described in [RFC 2119](https://www.ietf.org/r
 read: AGENTS.md
 ```
 
+- [AMP](https://ampcode.com/manual#AGENTS.md)
 - [Factory AI](https://www.factory.ai/), natively supports `AGENTS.md`.
 - [Github Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/tutorials/coding-agent/get-the-best-results#adding-custom-instructions-to-your-repository),
   if there is no Copilot instructions file, will fall back to any existing `AGENTS.md` file.\*1
