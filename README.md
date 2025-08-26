@@ -1,5 +1,14 @@
 # Agent Rules
 
+<div style="background: #ffff88; border: 5px solid #ff0000; padding: 2rem">
+<p style="font-size: 1.5rem; color: #000000">
+  <b>NOTE:</b> This project has been deprecated. Please use the <a href="https://agents/md">AGENTS.md</a> project.
+</p>
+<p style="font-size: 2rem;">
+  <b><a href="https://github.com/openai/agents.md">https://github.com/openai/agents.md</a></b>
+</p>
+</div>
+
 ## Summary
 
 Agent Rules is a community standard for unifying guidelines for AI coding agents via standard
